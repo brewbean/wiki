@@ -15,6 +15,14 @@ Org wiki
   - Live code-along with urql founders, brief demonstration of how _**document caching**_ works
   - **What does this all mean?** Document based caching as implemented by urql is significantly less sophisticated than my initial assumption. Assume that no caching is done if you are querying a list of things and then querying an item that should be in that list. If you see the use case of the upvote in the video, you can see that document caching is very convenient, but also can overfetch - aka aggressively invalidate cache.
 
+- To make GQL work
+  - download GraphQL graphql.vscode-graphql
+  - make sure u r on the latest version XD
+
+- When to do GraphQL queries on the component level or page level
+  - Pick lazy vs early loading
+  - Determine if the user WILL see all of the queries, or if they MIGHT click into one (loading 1 item vs 30 things at once)
+  - Pick your battle, both decisions will have their trade offs
 
 ## Notes on useMemo and useEffect
 `useMemo` and `useEffect` uses the dependency array to trigger a new evaluation on dependency change
@@ -96,3 +104,6 @@ If a component is reused in a different context - another page that wasn’t ini
 
 ### Why is it bad to use a hook to store the state & update the state?
 The trade off is now having to manage 2 central data stores in terms of scalability though as your logic gets more complex, the container hook method (brain) can help, but it introduces horrible obscure bugs when involving side effects, which is why I rather opt for one app-level context solution rather than smaller context solutions. App-level contexts for storing data would be urql cache or redux
+
+
+
