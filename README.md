@@ -19,6 +19,10 @@ Org wiki
   - download GraphQL graphql.vscode-graphql
   - make sure u r on the latest version XD
 
+- My urql cache wasn't Hit what gives?
+  - If it doesn't get hit with the urql tool, the extension is a little buggy
+  - Check network tab and see if there was a network query again, if there wasn't, most likely it did come from the cache.
+  
 - When to do GraphQL queries on the component level or page level
   - Pick lazy vs early loading
   - Determine if the user WILL see all of the queries, or if they MIGHT click into one (loading 1 item vs 30 things at once)
