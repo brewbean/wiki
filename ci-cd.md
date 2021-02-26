@@ -7,7 +7,7 @@
 
 ## Workflow
 
-!(diagram)[brewbean_env.png "Brewbean Diagram"]
+![diagram](brewbean_env.png)
 
 ## Environments
 
